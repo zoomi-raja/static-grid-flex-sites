@@ -2,7 +2,7 @@
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 1.6rem;
+  margin-bottom: 6rem;
 
   &--main {
     display: block;
@@ -11,6 +11,10 @@
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s;
     animation-timing-function: ease-in-out;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &--sub {
     display: block;
@@ -19,6 +23,9 @@
     letter-spacing: 1.7rem;
     animation: moveInRight 1s;
     animation-timing-function: ease-in-out;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 .heading-secondary {
@@ -35,6 +42,12 @@
   letter-spacing: 0.2rem;
   background-clip: text;
   color: transparent;
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }
 .heading-tertiary {
   font-size: 1.6rem;
